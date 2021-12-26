@@ -1,0 +1,145 @@
+/* DECLARAÇÃO DE VARIAVEL DENTRO DA RAIZ DO DOCUMENTO, DENTRO DO ELEMENTO ROOT */
+:root{
+    --vermelho:#E50914;
+    --preto:#141414;
+
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background-color: var(--preto);/* COR VARIAVEL */
+    font-family: 'Arial', Times, serif; /* FONTE */
+    color: white;
+    
+}
+
+
+
+header .container{
+    display: flex;  /*MANTERA SEMPRE UM LAYOUT FLEXIVEL DENTRO DO SEU ELEMENTO PAI, SE ADEQUANDO CONFORME NECESSIDADE  NO VERTICAL  */
+    flex-direction:row ; /*DEFINE COMO OS ITENS FLEXÍVEIS SÃO COLOCADOS NO CONTEINER FLEXIVEL - NO CASO ROW É THE FULL*/
+    align-items: center;  /* ALINHAMENTO DOS ITENS NO CENTRO DO CONTAINER */
+    justify-content: space-between; /* PARA JUSTIFICAR OS ELEMENTOS/ SPACE BETWEEN ELE OFERECE ESTAÇO ENTRE OS ELEMENTOS LOGO E ANCORAS DE FORMA HORIZONTAL */
+  
+    
+}
+
+header .logo{
+    margin-left: 5px;  /* MARGEM A ESQUERDA */
+    color: var(--vermelho); /* COR - VARIAVEL */
+    font-family: 'Arial Black', 'Times New Roman', Times, serif; /* FONTE */
+    font-size: 40px; /* TAMANHO DE FONTE */
+   
+}
+/* ANCORAS DA NAV DO CONTAINER  */
+ header nav a{
+     text-decoration: none; /* PARA RETIRAR AS LINHAS AZUIS QUE FICA EMBAIXO DAS ANCORAS  */
+     color: #AAA; /* COR DO TEXTO */
+     margin-right: 10px; /* MARGEM A DIREITA, ESPAÇO ENTRE OS ELEMENTOS */
+     font-size: 20px; /* TAMANHO DE FONTE */
+     
+ }
+
+ /* TROCA A COR DO ELEMENTO QUANDO PASSADO O MOUSE */
+ header nav a:hover{ 
+    color: #fff;
+ }
+
+ /* OPERA PRINCIPAL */
+
+ .opera-principal{
+     font-size: 20px; /* TAMANHO FONTE */
+     /* gradiente de fonte conforme cor da foto + o direcionamento da foto */
+     background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url(../img/capa.jpg); /* DIRECIONAMENTO DE IMAGEM */
+    
+     height: 700px; /* ALTURA */
+     background-size: cover; /* TAMANHO DA IMAGEM / COVER - COBRE A CAIXA */
+
+     display: flex; /*MANTERA SEMPRE UM LAYOUT FLEXIVEL DENTRO DO SEU ELEMENTO PAI, SE ADEQUANDO CONFORME NECESSIDADE  NO VERTICAL  */
+     flex-direction: column; /*DEFINE COMO OS ITENS FLEXÍVEIS SÃO COLOCADOS NO CONTEINER FLEXIVEL - NO CASO COLUM ALINHA NO HORIZONTAL UM EMBAIXO DO OUTRO*/
+     justify-content: center; /* ALINHA NO CENTRO OS ELEMENTOS, SEGUINDO A MESMA DIREÇÃO DO FLEX DIRECTION */
+     align-content: flex-start;/* ALINHA OS ELEMENTOS DA DIREITA PARA ESQUERDA */
+ }
+
+.descricao{
+    margin-top: 20px; /* MARGEM ACIMA  */
+    margin-bottom: 40px; /* MARGEM ABAIXO */
+    margin-right: 70%;  /* MARGEM A ESQUERDA 70% COM RELAÇÃO AO BODY */
+    text-align: justify;  /* ALINHAMENTO DO TEXTO JUSTIFICADO */
+}
+
+.titulo{
+    font-size: 40px; /* TAMANHO FONTE */
+}
+
+.botao{
+    margin-top: 5%;
+    background-color: rgba(56, 43, 43, 0.5);
+    border: none; /* COR DA BORDA / NESTE CASO NENHUMA */
+    color: white; /* COR DA FONTE */
+    padding: 15px; /* ESPAÇO INTERNO DO ELEMENTO */
+    margin-right: 15px;
+    font: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius:5%;
+    transition: 2s;
+
+}
+/* TROCA DA COR DO BOTÃO QUANDO SE APROXIMA O MOUSE */
+.botao:hover{
+    background-color: white;  /* COR DO BOTÃO NA APROXIMAÇÃO */
+    color: black; /* COR DO BOTÃO SEM O MOUSE*/
+}
+.botao i{
+    margin-right: 8px; /* ESPAÇO ENTRE OS ICONES FONT AWEASOME E O TEXTO DELES*/
+}
+
+.container{
+
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.box-filme{
+
+    height: 100%;
+    width: 180px;
+    display: block;
+}
+.carousel-opera{
+    margin-top: 5px;
+}
+
+/* RESPONSIVIDADE*/
+
+/* maximo 700px tera o layout abaixo, acima de 700px será o layout configurado acima*/
+
+@media screen and (max-width:700px) {
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 190px;
+        height: 60px;
+        display: flex;
+      
+    }
+}
+
+
+@media screen and (min-width:1000px) {
+    .descricao{
+        width: 50%;
+        
+    }
+}
